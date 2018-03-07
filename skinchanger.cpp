@@ -8,10 +8,12 @@
 
 #include "skinchanger.h"
 
-int KnifeCT = WEAPON_KNIFE_KARAMBIT;
+int KnifeCT = WEAPON_KNIFE_KARAMBIT; //Change knife model if you make changes below
 int KnifeT = WEAPON_KNIFE_BUTTERFLY;
 
 std::unordered_map<int, cSkin> cSkinchanger::SkinList = std::unordered_map<int, cSkin>( {
+    /*To add more skins add std::make_pair( WEAPON_NAME, cSkin(PaintkitID, SEED, ItemDefinition, StatTrack, CustomName, Float))
+     Seed = PaintkitID or 0 ; Use -1 as ItemDefinition for anything other than Knife ; For knife put ItemDefinition as WEAPON_KNIFE_KNIFETYPE*/
     std::make_pair( WEAPON_AK47, cSkin( 675, 675, -1, -1, ( char* )( "Allahu Akbar" ), 0.0001f ) ),
     std::make_pair( WEAPON_KNIFE, cSkin( 419, 419, WEAPON_KNIFE_KARAMBIT, -1, ( char* )( "Karma" ), 0.0001f )),
     std::make_pair( WEAPON_AWP, cSkin(344, 344, -1, -1, nullptr, 0.0001f)),
